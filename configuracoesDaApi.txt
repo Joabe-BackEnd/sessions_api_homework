@@ -1,0 +1,19 @@
+montei a configuração com ajuda da documentação e
+um pouco de ia, pode não ser a melhor, mas atendeu
+minhas necessidades.
+
+spring.application.name=sessions
+
+spring.datasource.url=${BANCO_DE_DADOS}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+spring.session.store-type=jdbc
+spring.session.jdbc.initialize-schema=always
+
+server.servlet.session.timeout=1m
+spring.session.jdbc.cleanup-cron=0 * * * * *
